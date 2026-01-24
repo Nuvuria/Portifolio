@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --background: 250 250 250; /* #fafafa */
+    --surface: 255 255 255;    /* #ffffff */
+    --primary: 24 24 27;       /* #18181b */
+    --secondary: 113 113 122;  /* #71717a */
+    --accent: 37 99 235;       /* #2563eb */
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --background: 9 9 11;      /* #09090b */
+    --surface: 24 24 27;       /* #18181b */
+    --primary: 250 250 250;    /* #fafafa */
+    --secondary: 161 161 170;  /* #a1a1aa */
+    --accent: 59 130 246;      /* #3b82f6 */
+  }
+
+  body {
+    @apply bg-background text-primary transition-colors duration-300;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.pixel-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(24, 10px);
+  grid-template-rows: repeat(14, 10px);
+  gap: 6px;
+  transform: translate(-50%, -50%);
+}
+
+.pixel {
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: rgba(250, 250, 250, 0.06);
+  animation: pixelWave 4s ease-in-out infinite;
+}
+
+@keyframes pixelWave {
+  0% {
+    opacity: 0.08;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 0.35;
+    transform: translateY(-6px);
+  }
+  50% {
+    opacity: 0.18;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 0.4;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 0.08;
+    transform: translateY(0);
+  }
+}
