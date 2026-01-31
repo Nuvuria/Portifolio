@@ -28,14 +28,6 @@ export const skills: string[] = [
 
 export const saasProjects: Project[] = [
   {
-    id: 1,
-    title: "Mensalix",
-    description: "Plataforma completa para gestão de assinaturas e pagamentos recorrentes, focada em automação e redução de inadimplência.",
-    stack: ["React", "TypeScript", "Node.js", "Stripe"],
-    link: "https://www.mensalix.com.br",
-    imageUrl: "/mensalix.jpeg"
-  },
-  {
     id: 2,
     title: "Painele",
     description: "Dashboard administrativo intuitivo para visualização de métricas e análise de dados em tempo real.",
